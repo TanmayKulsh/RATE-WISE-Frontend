@@ -62,13 +62,13 @@ function AdminLogin() {
 
 
                         <div className="text-center pt-1 mb-5 pb-1">
-                            <MDBBtn className="mb-4 w-100 gradient-custom-2" >Sign in</MDBBtn>
+                            <MDBBtn className="mb-4 w-100 gradient-custom-2" type='button' >Sign in</MDBBtn>
                             <a className="text-muted" href="#!">Forgot password?</a>
                         </div>
 
                         <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
                             <p className="mb-0">Don't have an account?</p>
-                            <MDBBtn type='submit' outline className='mx-2' color='danger'>
+                            <MDBBtn outline className='mx-2' color='danger'>
                                 Sign Up
                             </MDBBtn>
                         </div>
