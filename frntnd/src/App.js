@@ -8,7 +8,7 @@ import Content from './page/contentDetail/Content';
 import NavBar from './components/navBar/NavBar';
 import AdminLogin from './components/login/AdminLogin';
 import UserLogin from './components/login/UserLogin';
-
+import UserSignUp from './components/login/UserSignUp';
 
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
               <Route path='movies/:type' element={<MovieList></MovieList>}></Route>
               <Route path='adminlogin' element={<AdminLogin></AdminLogin>}></Route>
               <Route path='userlogin' element={<UserLogin></UserLogin>}></Route>
+              <Route path='usersignup' element={<UserSignUp></UserSignUp>}></Route>
               <Route path='/*' element={<h1>Error Page</h1>}></Route>
               
             </Routes>

@@ -13,7 +13,7 @@ import {
     from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 
-function AdminLogin() {
+function UserLogin() {
 
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -68,7 +68,7 @@ function AdminLogin() {
 
                         <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
                             <p className="mb-0">Don't have an account?</p>
-                            <MDBBtn outline className='mx-2' color='danger'>
+                            <MDBBtn outline className='mx-2' color='danger' href='/usersignup'>
                                 Sign Up
                             </MDBBtn>
                         </div>
@@ -101,4 +101,4 @@ function AdminLogin() {
     );
 }
 
-export default AdminLogin;
+export default UserLogin;
