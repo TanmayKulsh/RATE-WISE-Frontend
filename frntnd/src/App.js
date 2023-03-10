@@ -15,6 +15,7 @@ import AdminProfile from './components/profile/AdminProfile';
 import ContactUs from './page/ContactUs';
 import AboutUs from './page/AboutUs';
 import AddArtistForm from './components/artist/AddArtist';
+import AdminFunction from './components/admin/AdminFunctions';
 
 
 function App() {
@@ -43,6 +44,8 @@ function App() {
               <Route path='userprofile' element={<UserProfile></UserProfile>}></Route>
               <Route path='adminprofile' element={<AdminProfile></AdminProfile>}></Route>
               <Route path='addartist' element={<AddArtistForm></AddArtistForm>}></Route>
+              <Route path='adminfunc' element={<AdminFunction></AdminFunction>}></Route>
+
               <Route path='/*' element={<h1>Error Page</h1>}></Route>
               
             </Routes>
