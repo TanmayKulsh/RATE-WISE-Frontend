@@ -47,12 +47,12 @@ const UserSignUp = () => {
 
         if(password === repassword){
             const dto = {
-                firstNAme: {firstNAme},
-                lastName: {lastName},
-                dob: {dob},
-                gender: {selectedGender},
-                email: {email},
-                password: {password},
+                firstNAme: firstNAme,
+                lastName: lastName,
+                dob: dob,
+                gender: selectedGender,
+                email: email,
+                password: password,
                 premium: false,
                 isActive: true 
             }

@@ -8,6 +8,7 @@ import logo from "../../images/Screenshot_2023-03-08_152245-removebg-preview.png
 
 
 const NavBar = () => {
+    const navigate = useNavigate();
     var loggedinperson;
 
     const [currentUser, serCurrentUSer] = useState(undefined);
@@ -29,6 +30,9 @@ const NavBar = () => {
         window.location.reload();
     }
 
+    const viewProfile = () => {
+        navigate("/userprofile");
+    }
 
 
 
@@ -66,10 +70,10 @@ const NavBar = () => {
                         currentUser
                             ? (
                                 <div>
-                                    <button class="btn btn-secondary" type="button">
-                                        {/* {
-                                            localStorage.getItem(user.firstNAme)
-                                        } */}
+                                    <button class="btn btn-secondary" type="button" onClick={viewProfile}>
+                                    Hii {
+                                            (JSON.parse(localStorage.getItem("user"))).firstNAme
+                                        }
                                     </button>
                                     &nbsp;
                                     &nbsp;

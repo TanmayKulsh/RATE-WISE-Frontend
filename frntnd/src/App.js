@@ -10,6 +10,7 @@ import AdminLogin from './components/login/AdminLogin';
 import UserLogin from './components/login/UserLogin';
 import UserSignUp from './components/login/UserSignUp';
 import UpdateUser from './components/update/UpdateUser';
+import UserProfile from './components/profile/UserProfile';
 import ContactUs from './page/ContactUs';
 import AboutUs from './page/AboutUs';
 
@@ -19,13 +20,14 @@ function App() {
   return (
     <div className="App" style={{display:'flex', flexDirection:'column'}}>
       
-           <div><NavBar></NavBar></div>
-           <br></br>
-           <br></br>
-           <br></br>
-           <br></br>
            <Router>
-          <Header></Header>    
+          <div><NavBar></NavBar></div>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+           
+            <Header></Header>    
             <Routes>
               <Route index element={<Home></Home>}></Route>
               <Route path='movie/:id' element={<Content></Content>}></Route> 
@@ -36,6 +38,7 @@ function App() {
               <Route path='userupdate' element={<UpdateUser></UpdateUser>}></Route>
               <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
               <Route path='aboutus' element={<AboutUs></AboutUs>}></Route>
+              <Route path='userprofile' element={<UserProfile></UserProfile>}></Route>
               <Route path='/*' element={<h1>Error Page</h1>}></Route>
               
             </Routes>
