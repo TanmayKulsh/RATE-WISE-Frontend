@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ProfilePage = () => {
+const AdminPage = () => {
     
     const user = JSON.parse(localStorage.getItem("user"));
     const navigate = useNavigate();
@@ -12,7 +12,6 @@ const ProfilePage = () => {
         sessionStorage.removeItem("user");
         window.location.reload();
     }
-
 
 
   return (
@@ -29,14 +28,7 @@ const ProfilePage = () => {
       <p>Email: {user.email}</p>
       <br></br>
       </h4>
-      
-    <a onClick={logout} style={{color:"yellow"}}>logout</a>
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    &nbsp;
-    <a href="/userupdate" style={{color:"yellow"}}>Edit Profile</a>
+      <a href="/userupdate" style={{color:"yellow"}}>Edit Profile</a>
    <br></br>
    <br></br>
    <br></br>
@@ -48,4 +40,4 @@ const ProfilePage = () => {
   );
 }
 
-export default ProfilePage;
+export default AdminPage;
