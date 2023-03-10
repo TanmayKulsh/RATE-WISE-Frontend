@@ -13,7 +13,7 @@ import {
     from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 
-const UpdateUser = () => {
+const UpdateAdmin = () => {
     const navigate = useNavigate();
 
     // firstname lastname gender dob email cnfpassword password // isActive // premium
@@ -126,4 +126,4 @@ const UpdateUser = () => {
     );
 }
 
-export default UpdateUser;
+export default UpdateAdmin;

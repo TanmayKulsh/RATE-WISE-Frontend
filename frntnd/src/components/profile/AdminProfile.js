@@ -33,9 +33,20 @@ const AdminPage = () => {
    <br></br>
    <br></br>
     </div>
-    {/* <button type='button' onclick={logout}>Logout</button> &nbsp;
-    <button type='button' onclick={editprofile}>Edit Profile</button>
-     */}
+    <h4>Artist Operations</h4>
+    <a href="/addartist" style={{color:"yellow"}}>Add Artist</a>
+    <a href="/deleteartist" style={{color:"yellow"}}>Delete Artist</a>
+    <br></br>
+    <br></br>
+    <h4>Content Operations</h4>
+    <a href="/addcontent" style={{color:"yellow"}}>Add Content</a>
+    <a href="/deletecontent" style={{color:"yellow"}}>Delete Content</a>
+    <br></br>
+    <br></br>
+    <h4>User Operations</h4>
+    <a href="/deleteuser" style={{color:"yellow"}}>Add Content</a>
+    <a href="/upgradeuser" style={{color:"yellow"}}>Add Content</a>
+    
     </>
   );
 }
