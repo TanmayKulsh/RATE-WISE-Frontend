@@ -9,6 +9,9 @@ import NavBar from './components/navBar/NavBar';
 import AdminLogin from './components/login/AdminLogin';
 import UserLogin from './components/login/UserLogin';
 import UserSignUp from './components/login/UserSignUp';
+import UpdateUser from './components/update/UpdateUser';
+import ContactUs from './page/ContactUs';
+import AboutUs from './page/AboutUs';
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
               <Route path='adminlogin' element={<AdminLogin></AdminLogin>}></Route>
               <Route path='userlogin' element={<UserLogin></UserLogin>}></Route>
               <Route path='usersignup' element={<UserSignUp></UserSignUp>}></Route>
+              <Route path='userupdate' element={<UpdateUser></UpdateUser>}></Route>
+              <Route path='contactus' element={<ContactUs></ContactUs>}></Route>
+              <Route path='aboutus' element={<AboutUs></AboutUs>}></Route>
               <Route path='/*' element={<h1>Error Page</h1>}></Route>
               
             </Routes>
