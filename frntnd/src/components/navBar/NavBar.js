@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../images/Screenshot_2023-03-08_152245-removebg-preview.png";
+
 // import "./NavBar.css";
 
 
 
 
 const NavBar = () => {
+    var loggedinperson;
+
+    const [currentUser, serCurrentUSer] = useState(undefined);
+
+
+    useEffect(() => {
+        loggedinperson = JSON.parse(localStorage.getItem("user"));
+        if (loggedinperson) {
+            serCurrentUSer(loggedinperson);
+            console.log(localStorage.getItem("user").firstNAme)
+        }
+    }, [])
+
+
+    const logout = () => {
+        localStorage.removeItem("user");
+        sessionStorage.removeItem("user");
+
+        window.location.reload();
+    }
+
+
+
+
+
 
 
     return (
@@ -33,15 +60,39 @@ const NavBar = () => {
                         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                     </form>
                     &nbsp;&nbsp;
-                    &nbsp;<div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Login
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="/adminlogin">Admin</a>
-                            <a class="dropdown-item" href="userlogin">User</a>
-                        </div>
-                    </div>
+                    &nbsp;
+
+                    {
+                        currentUser
+                            ? (
+                                <div>
+                                    <button class="btn btn-secondary" type="button">
+                                        {/* {
+                                            localStorage.getItem(user.firstNAme)
+                                        } */}
+                                    </button>
+                                    &nbsp;
+                                    &nbsp;
+                                    <button class="btn btn-secondary person" type="button" onClick={logout}>
+                                        Logout
+                                    </button>
+                                </div>
+                            ) : (
+                                <div class="dropdown">
+                                    <div>
+                                        <button class="btn btn-secondary" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="true">
+                                            <a href="/userlogin" style={{ textDecoration: "none", }}>User Login</a>
+
+                                        </button>
+                                        &nbsp;
+                                        &nbsp;
+                                        <button class="btn btn-secondary" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="true" href="/adminlogin">
+                                            <a href="/adminlogin" style={{ textDecoration: "none" }}>Admin Login</a>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            )}
                 </div>
             </nav>
         </div>

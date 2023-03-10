@@ -14,6 +14,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 
 const UserSignUp = () => {
+    const navigate = useNavigate();
 
     // firstname lastname gender dob email cnfpassword password // isActive // premium
     const [firstNAme, setFirstName] = useState();
@@ -52,11 +53,13 @@ const UserSignUp = () => {
                 gender: {selectedGender},
                 email: {email},
                 password: {password},
-                premium: true,
+                premium: false,
                 isActive: true 
             }
 
             console.log(dto)
+            sessionStorage.setItem("user",JSON.stringify(dto));
+            localStorage.setItem("user",JSON.stringify(dto));
             
         // Service.authenticateuser(dto)
         //     .then((Response) => {
@@ -68,7 +71,7 @@ const UserSignUp = () => {
         else{
             alert("Password doesn't match with Re-Entered password");
         }
-
+        window.location.reload();
     }
 
     return (
