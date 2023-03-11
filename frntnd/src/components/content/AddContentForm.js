@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const genderOptions = ['MALE', 'FEMALE', 'OTHER'];
+const genreOptions = ['MALE', 'FEMALE', 'OTHER'];
 const typeOptions = ['ACTOR', 'SINGER', 'DIRECTOR'];
 
-const AddArtistForm = () => {
+const AddContentForm = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [gender, setGender] = useState(genderOptions[0]);
@@ -105,4 +105,4 @@ const AddArtistForm = () => {
     );
 };
 
-export default AddArtistForm;
+export default AddContentForm;
